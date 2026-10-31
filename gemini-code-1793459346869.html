@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLIS & PRAXIS | Ensayos de Economía Crítica y Ecología Autonómica</title>
+    <!-- Tailwind CSS (CDN para desarrollo y prototipado) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Space Grotesk (Titulares Gen-Z/Contemporáneos) + Newsreader (Serif Académica) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F5F2EB',       /* Papel mate/reciclado cálido */
+                        ink: '#1C1917',         /* Tinta negra grafito */
+                        moss: '#2E4A3B',        /* Verde autonomía / ecología */
+                        terracotta: '#9E3B29',  /* Rojo arcilla / combativo sobrio */
+                        sand: '#E6E0D3',        /* Tono neutro secundario */
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos de bordes y sombras estilo Neo-brutalismo Suave Editorial */
+        .box-editorial {
+            background-color: #F5F2EB;
+            border: 2px solid #1C1917;
+            box-shadow: 4px 4px 0px 0px #1C1917;
+            transition: all 0.15s ease-in-out;
+        }
+        .box-editorial:hover {
+            box-shadow: 6px 6px 0px 0px #1C1917;
+            transform: translate(-2px, -2px);
+        }
+        .box-editorial-flat {
+            background-color: #F5F2EB;
+            border: 2px solid #1C1917;
+            box-shadow: 3px 3px 0px 0px #1C1917;
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-serif antialiased selection:bg-terracotta selection:text-white min-h-screen flex flex-col">
+
+    <!-- BARRA SUPERIOR: Transparencia & Estado del Servidor -->
+    <div class="bg-ink text-paper text-xs font-sans py-2 px-4 border-b border-ink">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Servidor Autónomo (Sin Rastreadores / Sin Cookies)</span>
+            </div>
+            <div class="flex gap-4">
+                <span class="opacity-80">Licencia: Creative Commons BY-SA 4.0</span>
+                <span class="font-bold text-terracotta">Peer-Reviewed Open Access</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="border-b-2 border-ink bg-sand/30 py-8 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+                <div class="flex items-center gap-2 mb-2 font-sans text-xs tracking-widest uppercase font-bold text-moss">
+                    <i data-lucide="book-open-check" class="w-4 h-4"></i>
+                    <span>Laboratorio de Teoría Crítica & Investigación de Campo</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-sans font-bold text-ink tracking-tight">
+                    POLIS <span class="text-terracotta">&</span> PRAXIS
+                </h1>
+                <p class="font-serif italic text-lg md:text-xl text-ink/80 mt-1">
+                    Cuadernos de decrecimiento, autonomía zapatista y sociología del colapso.
+                </p>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="font-sans font-medium text-sm flex flex-wrap gap-2">
+                <a href="#ensayos" class="px-3 py-1.5 box-editorial-flat hover:bg-moss hover:text-white transition-colors">
+                    Ensayos
+                </a>
+                <a href="#metodologia" class="px-3 py-1.5 box-editorial-flat hover:bg-moss hover:text-white transition-colors">
+                    Metodología
+                </a>
+                <a href="#biblioteca" class="px-3 py-1.5 box-editorial-flat hover:bg-moss hover:text-white transition-colors">
+                    Fuentes & Datos
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MANIFIESTO DE TRANSPARENCIA & AUTENTICIDAD (Gen-Z/Editorial) -->
+    <section class="max-w-6xl mx-auto w-full px-4 my-8">
+        <div class="box-editorial p-6 bg-amber-50/50">
+            <div class="flex items-start gap-4">
+                <div class="p-3 bg-terracotta text-white font-sans font-bold text-xl rounded-none border border-ink hidden sm:block">
+                    01
+                </div>
+                <div class="flex-1 font-sans">
+                    <h2 class="text-lg font-bold uppercase tracking-wide text-ink flex items-center gap-2">
+                        <span>Compromiso de Autenticidad Crítica</span>
+                        <i data-lucide="shield-check" class="w-4 h-4 text-moss"></i>
+                    </h2>
+                    <p class="font-serif text-base text-ink/90 mt-1">
+                        Este espacio rechaza el contenido generado por IA sin supervisión y los algoritmos de recomendación publicitaria. 
+                        Cada artículo publicado incluye su matriz de <strong>evidencia empírica, metodología de campo y fuentes académicas abiertas</strong> para que el lector pueda verificar de forma independiente los argumentos presentados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PRINCIPAL: ENSAYOS DESTACADOS -->
+    <main id="ensayos" class="max-w-6xl mx-auto w-full px-4 my-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- ARTÍCULO DESTACADO (8 cols) -->
+        <section class="lg:col-span-8 flex flex-col gap-8">
+            <article class="box-editorial p-6 md:p-8 bg-paper">
+                <!-- Metadatos superiores -->
+                <div class="font-sans text-xs flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-ink/20">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-moss text-white px-2 py-0.5 font-bold uppercase tracking-wider text-[10px]">Econ. Ecológica</span>
+                        <span class="text-ink/70">Lectura: 12 min</span>
+                    </div>
+                    <span class="font-mono text-ink/70">Publicado: Octubre, 2026</span>
+                </div>
+
+                <!-- Titular y Subtítulo -->
+                <h2 class="text-2xl md:text-4xl font-sans font-bold text-ink leading-tight mb-3 hover:text-terracotta transition-colors">
+                    Más allá del Producto Interior Bruto: Límites físicos del capital y decrecimiento planificado
+                </h2>
+                <p class="font-serif italic text-lg text-ink/80 mb-6">
+                    Un análisis empírico sobre la imposibilidad del desacoplamiento absoluto entre PIB global y huella de carbono.
+                </p>
+
+                <!-- Tarjeta de Resumen Rápido (Quick Takeaways para Gen Z) -->
+                <div class="bg-sand/50 p-4 border-l-4 border-terracotta font-sans text-sm mb-6">
+                    <span class="font-bold uppercase text-xs tracking-wider text-terracotta block mb-1">Tesis Central / Key Takeaway:</span>
+                    <p class="font-serif text-ink">
+                        Los datos de los últimos 20 años demuestran que la transición energéticamente sostenible exige una reducción directa de la demanda agregada global de energía, y no solo una sustitución de la matriz productiva.
+                    </p>
+                </div>
+
+                <!-- Indicador de Respaldo Académico -->
+                <div class="flex items-center gap-2 text-xs font-sans bg-emerald-100/60 text-emerald-950 p-2.5 mb-6 border border-emerald-300">
+                    <i data-lucide="file-text" class="w-4 h-4 text-moss shrink-0"></i>
+                    <span><strong>Respaldo de Evidencia:</strong> 18 publicaciones científicas revisadas por pares (IPCC, Ecological Economics, Nature Sustainability).</span>
+                </div>
+
+                <!-- Fragmento del Texto -->
+                <div class="space-y-4 text-base md:text-lg leading-relaxed font-serif text-ink">
+                    <p>
+                        La hipótesis del "crecimiento verde" sostiene que es posible desvincular el aumento de la actividad económica del deterioro ecosistémico. Sin embargo, al examinar la literatura científica reciente, el modelo actual muestra fallas estructurales inevitables bajo las leyes de la termodinámica aplicada a la economía...
+                    </p>
+                </div>
+
+                <!-- Pie del Artículo (Bibliografía y Enlaces) -->
+                <div class="mt-8 pt-4 border-t border-ink/20 font-sans flex flex-wrap justify-between items-center gap-4">
+                    <button onclick="document.getElementById('biblio-1').classList.toggle('hidden')" class="text-xs font-bold text-moss hover:underline flex items-center gap-1">
+                        <i data-lucide="list-tree" class="w-4 h-4"></i>
+                        <span>Ver Referencias Bibliográficas</span>
+                    </button>
+                    <a href="#" class="px-4 py-2 bg-ink text-paper hover:bg-terracotta text-xs font-bold uppercase tracking-wider transition-colors">
+                        Leer Ensayo Completo (PDF)
+                    </a>
+                </div>
+
+                <!-- Sección desplegable de bibliografía -->
+                <div id="biblio-1" class="hidden mt-4 p-4 bg-sand/30 font-sans text-xs border border-ink/20">
+                    <p class="font-bold mb-2">Fuentes citadas en este trabajo:</p>
+                    <ul class="list-disc pl-4 space-y-1 text-ink/80 font-mono">
+                        <li>Haberl et al. (2020). A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions. <em>Environmental Research Letters</em>.</li>
+                        <li>Jackson, T. (2021). <em>Post Growth: Life after Capitalism</em>. Polity Press.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- BARRA LATERAL: ARCHIVO TEÓRICO Y RECURSOS (4 cols) -->
+        <aside class="lg:col-span-4 flex flex-col gap-6">
+            
+            <!-- Bloque: Ejes Temáticos -->
+            <div class="box-editorial p-5 bg-paper">
+                <h3 class="font-sans font-bold text-sm uppercase tracking-wider text-ink pb-2 mb-4 border-b-2 border-ink flex items-center gap-2">
+                    <i data-lucide="layers" class="w-4 h-4 text-terracotta"></i>
+                    <span>Líneas de Investigación</span>
+                </h3>
+                <ul class="font-sans text-sm space-y-2">
+                    <li>
+                        <a href="#" class="flex justify-between items-center p-2 hover:bg-sand/60 transition-colors">
+                            <span class="font-medium">1. Autonomía & Zapatismo</span>
+                            <span class="text-xs bg-ink/10 px-2 py-0.5 font-mono">08</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex justify-between items-center p-2 hover:bg-sand/60 transition-colors">
+                            <span class="font-medium">2. Economía del Decrecimiento</span>
+                            <span class="text-xs bg-ink/10 px-2 py-0.5 font-mono">14</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex justify-between items-center p-2 hover:bg-sand/60 transition-colors">
+                            <span class="font-medium">3. Crítica Comunista & Anarquista</span>
+                            <span class="text-xs bg-ink/10 px-2 py-0.5 font-mono">11</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Bloque: Descarga Abierta -->
+            <div class="box-editorial p-5 bg-moss text-white">
+                <h3 class="font-sans font-bold text-sm uppercase tracking-wider pb-2 mb-2 border-b border-white/20 flex items-center gap-2">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Biblioteca de Libre Acceso</span>
+                </h3>
+                <p class="font-serif text-sm opacity-90 mb-4">
+                    Descarga repositorios de textos seleccionados en formato ePub y PDF comprimido. Sin registros.
+                </p>
+                <a href="#biblioteca" class="block text-center w-full py-2 bg-paper text-ink font-sans font-bold text-xs uppercase hover:bg-terracotta hover:text-white transition-colors">
+                    Explorar Repositorio
+                </a>
+            </div>
+
+        </aside>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="border-t-2 border-ink bg-sand/40 py-8 px-4 mt-12 font-sans">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-ink/80">
+            <div>
+                <p class="font-bold text-ink">POLIS & PRAXIS — Publicación de Pensamiento Crítico</p>
+                <p>Alojado mediante GitHub Pages • Estética de imprenta autónoma</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://github.com" target="_blank" class="hover:underline flex items-center gap-1 font-bold">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span>Ver Código en GitHub</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inicialización de iconos Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
